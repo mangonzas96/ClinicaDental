@@ -98,7 +98,7 @@
                 <div class="links">
                     <a href="https://laravel.com/docs">Contacta con nosotros</a>
                     <a href="https://laracasts.com">Servicios</a>
-                    <a href="https://laravel-news.com">Personal</a>
+                    <a href="https://laravel-news.com">Personal de la clínica</a>
                     <a href="https://forge.laravel.com">Noticias</a>
                     <a href="https://github.com/laravel/laravel">Citas</a>
                 </div>
