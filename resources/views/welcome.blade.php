@@ -65,10 +65,8 @@
         </style>
     </head>
     <body>
-        <img src="../../Desktop/diente.jpg"
-             alt="Diente feliz"
-             title="Imagen de un diente feliz"
-         />
+        <img src="http://www.sanchezromero.dental/wp-content/uploads/2015/06/logo-5-copia.png"
+        />
 
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
@@ -77,16 +75,15 @@
 
                 </div>
 
-
             <div class="content">
                 <div class="title m-b-md">
-                    Clinica Dental Arroyo 74
+                    Arroyo 74
                 </div>
 
                 <?php
-                    $objetivos = ["1" => "Modernización de la aplicación web actual" , "2" => "Mejora de la usabilidad de la aplicación" , "3" => "Mejora de la intuitividad de la página"]
+                    $objetivos = ["1" => "Modernización de la aplicación web actual" , "2" => "Mejora de la usabilidad de la aplicación" , "3" => "Mejora de la intuitividad de la aplicación" , "4" => "Ampliación de contenidos" , "5" => "Creación de un apartado para la programación de citas"]
                 ?>
-                <table style="position:absolute;top:100px;left:45px">
+                <table style="position:absolute;bottom:50px;left:45px">
                     <tr>
                         <th> Número de objetivo</th>
                         <th> Objetivo </th>
@@ -110,7 +107,7 @@
                 <?php
                 $alumnos = ["González Gómez, Manuel" => "mangonzas96@gmail.com" , "González Sánchez, Celia" => "celiags250396@gmail.com"]
                 ?>
-                <table style="position:absolute;top:100px;right:45px">
+                <table style="position:absolute;bottom:100px;right:45px">
                     <tr>
                         <th> Apellidos, nombre </th>
                         <th> Correo</th>
