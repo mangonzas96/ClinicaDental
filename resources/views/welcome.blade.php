@@ -65,17 +65,18 @@
         </style>
     </head>
     <body>
+        <img src="../../Desktop/diente.jpg"
+             alt="Diente feliz"
+             title="Imagen de un diente feliz"
+         />
+
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
                 <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+                        <a href="{{ url('/login') }}">ID_Personal</a>
+                        <a href="{{ url('/register') }}">Contraseña</a>
+
                 </div>
-            @endif
+
 
             <div class="content">
                 <div class="title m-b-md">
@@ -85,7 +86,7 @@
                 <?php
                     $objetivos = ["1" => "Modernización de la aplicación web actual" , "2" => "Mejora de la usabilidad de la aplicación" , "3" => "Mejora de la intuitividad de la página"]
                 ?>
-                <table>
+                <table style="position:absolute;top:100px;left:45px">
                     <tr>
                         <th> Número de objetivo</th>
                         <th> Objetivo </th>
@@ -105,12 +106,37 @@
                         }
                     ?>
                 </table>
+
+                <?php
+                $alumnos = ["González Gómez, Manuel" => "mangonzas96@gmail.com" , "González Sánchez, Celia" => "celiags250396@gmail.com"]
+                ?>
+                <table style="position:absolute;top:100px;right:45px">
+                    <tr>
+                        <th> Apellidos, nombre </th>
+                        <th> Correo</th>
+                    </tr>
+                    <?php
+                    foreach($alumnos as $apn => $correo){
+                    ?>
+                    <tr>
+                        <td>
+                            <?php echo $apn ?>
+                        </td>
+                        <td>
+                            <?php echo $correo ?>
+                        </td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
+
                 <div class="links">
-                    <a href="https://laravel.com/docs">Contacta con nosotros</a>
-                    <a href="https://laracasts.com">Servicios</a>
-                    <a href="https://laravel-news.com">Personal de la clínica</a>
-                    <a href="https://forge.laravel.com">Noticias</a>
-                    <a href="https://github.com/laravel/laravel">Citas</a>
+                    <a href="https://laravel.com/docs">Pacientes</a>
+                    <a href="https://laravel-news.com">Personal sanitario</a>
+                    <a href="https://forge.laravel.com">Personal extra</a>
+                    <a href="http://php.net/manual/es/langref.php">Gabinetes</a>
+                    <a href="https://www.mysql.com/products/workbench/">Citas del día</a>
                 </div>
             </div>
         </div>
