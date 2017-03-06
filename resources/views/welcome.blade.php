@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Clinica Dental</title>
+        <title>Arroyo 74</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -13,9 +13,9 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                background-color: #BAF0F0;
+                color: #04212F;
+                font-family: 'courier', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -77,17 +77,30 @@
                 </div>
             @endif
 
+            <html>
+            <head>
+                <title>
+                    Diente feliz
+                </title>
+            </head>
+            <body>
+            <div class="top-left" >
+                <img src="C:\Users\Manuel\Desktop\diente.jpg">
+            </div>
+            </body>
+            </html>
+
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Clinica Dental Arroyo 74
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">Contacta con nosotros</a>
+                    <a href="https://laracasts.com">Servicios</a>
+                    <a href="https://laravel-news.com">Personal</a>
+                    <a href="https://forge.laravel.com">Noticias</a>
+                    <a href="https://github.com/laravel/laravel">Citas</a>
                 </div>
             </div>
         </div>
