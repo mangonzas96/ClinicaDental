@@ -77,24 +77,34 @@
                 </div>
             @endif
 
-            <html>
-            <head>
-                <title>
-                    Diente feliz
-                </title>
-            </head>
-            <body>
-            <div class="top-left" >
-                <img src="C:\Users\Manuel\Desktop\diente.jpg">
-            </div>
-            </body>
-            </html>
-
             <div class="content">
                 <div class="title m-b-md">
                     Clinica Dental Arroyo 74
                 </div>
 
+                <?php
+                    $objetivos = ["1" => "Modernización de la aplicación web actual" , "2" => "Mejora de la usabilidad de la aplicación" , "3" => "Mejora de la intuitividad de la página"]
+                ?>
+                <table>
+                    <tr>
+                        <th> Número de objetivo</th>
+                        <th> Objetivo </th>
+                    </tr>
+                    <?php
+                        foreach($objetivos as $numero => $objetivo){
+                    ?>
+                    <tr>
+                        <td>
+                            <?php echo $numero ?>
+                        </td>
+                        <td>
+                            <?php echo $objetivo ?>
+                        </td>
+                    </tr>
+                    <?php
+                        }
+                    ?>
+                </table>
                 <div class="links">
                     <a href="https://laravel.com/docs">Contacta con nosotros</a>
                     <a href="https://laracasts.com">Servicios</a>
