@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
-
-use App\Users;
 use App\Paciente;
 
-class UserController extends Controller
+class PacienteController extends Controller
 {
-    public function paciente_de_usuario_1(){
-        $paciente = User::find(1)->paciente;
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -20,6 +21,9 @@ class UserController extends Controller
     public function index()
     {
         //
+        $pacientes = Paciente::all();
+
+        return view('pacientes/index', ['pacientes'=>$pacientes]);
     }
 
     /**
@@ -30,6 +34,7 @@ class UserController extends Controller
     public function create()
     {
         //
+        return view('pacientes/create');
     }
 
     /**
@@ -41,6 +46,25 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'nombre' => 'required|max:255',
+            'apellido' => 'required|max:255',
+            'dni' => 'required|max:255',
+            'telefono' => 'required|max:255',
+            'email' => 'required|max:255',
+            'direccion' => 'required|max:255',
+            'seguro' => 'required|max:255',
+            'infoGeneral' => 'required|max:255',
+        ]);
+        $user = new User($request->all());
+        $user->save();
+
+        $paciente = new Paciente($request->all());
+        $paciente->save();
+
+        flash('Paciente creado correctamente');
+
+        return redirect()->route('pacientes.index');
     }
 
     /**
@@ -63,6 +87,10 @@ class UserController extends Controller
     public function edit($id)
     {
         //
+        $user = User::find($id);
+        $paciente = Paciente::find($id);
+
+        return view('pacientes/edit',['user'=>$user, 'paciente'=>$paciente]);
     }
 
     /**
