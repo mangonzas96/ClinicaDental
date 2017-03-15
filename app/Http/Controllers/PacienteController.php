@@ -102,6 +102,25 @@ class PacienteController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->validate($request, [
+            'nombre' => 'required|max:255',
+            'apellido' => 'required|max:255',
+            'dni' => 'required|max:255',
+            'telefono' => 'required|max:255',
+            'email' => 'required|max:255',
+            'direccion' => 'required|max:255',
+            'seguro' => 'required|max:255',
+            'infoGeneral' => 'required|max:255',
+        ]);
+        $user = new User($request->all());
+        $user->save();
+
+        $paciente = new Paciente($request->all());
+        $paciente->save();
+
+        flash('Paciente modificado correctamente');
+
+        return redirect()->route('pacientes.index');
     }
 
     /**
@@ -113,5 +132,10 @@ class PacienteController extends Controller
     public function destroy($id)
     {
         //
+        $paciente = Paciente::find($id);
+        $paciente->delete();
+        flash('Paciente borrado correctamente');
+
+        return redirect()->route('pacientes.index');
     }
 }
