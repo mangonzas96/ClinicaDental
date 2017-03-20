@@ -17,8 +17,10 @@ class CreatePacientesTable extends Migration
             $table->increments('id');
             $table->string('seguro');
             $table->string('infoGeneral');
-            $table->unsignedInteger('persona_id');
+            $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedInteger('tratamiento_id');
+            $table->foreign('tratamiento_id')->references('id')->on('tratamientos')->onDelete('cascade');
             $table->timestamps();
         });
     }

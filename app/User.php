@@ -20,6 +20,13 @@ class User extends Authenticatable
         return $this->hasOne('App\Paciente');
     }
 
+    public function odontologo(){
+        return $this->hasOne('App\Odontologo');
+    }
+
+    public function personalextra(){
+        return $this->hasOne('App\PersonalExtra');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *
