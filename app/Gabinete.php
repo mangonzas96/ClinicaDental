@@ -9,7 +9,7 @@ class Gabinete extends Model
     //
     protected $fillable = ['especificaciones'];
 
-    public function tratamiento(){
-        return $this->hasMany('App\Tratamiento');
+    public function sesion(){
+        return $this->hasMany('App\Sesion');
     }
 }

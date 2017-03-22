@@ -17,7 +17,8 @@ class Tratamiento extends Model
         return $this->hasMany('App\Sesion');
     }
 
-    public function gabinete(){
-        return $this->belongsTo('App\Gabinete');
+    public function odontologo(){
+        return $this->belongsTo('App\Odontologo');
     }
+
 }

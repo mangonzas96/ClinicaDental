@@ -16,4 +16,12 @@ class Odontologo extends Model
     public function paciente(){
         return $this->belongsToMany('App\Paciente');
     }
+
+    public function tratamiento(){
+        return $this->hasMany('App\Tratamiento');
+    }
+
+    public function sesion(){
+        return $this->hasMany('App\Sesion');
+    }
 }

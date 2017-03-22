@@ -21,6 +21,10 @@ class CreateSesionsTable extends Migration
             $table->foreign('gabinete_id')->references('id')->on('gabinetes')->onDelete('cascade');
             $table->unsignedInteger('paciente_id');
             $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');
+            $table->unsignedInteger('tratamiento_id');
+            $table->foreign('tratamiento_id')->references('id')->on('tratamientos')->onDelete('cascade');
+            $table->unsignedInteger('odontologo_id');
+            $table->foreign('odontologo_id')->references('id')->on('odontologos')->onDelete('cascade');
             $table->timestamps();
         });
     }

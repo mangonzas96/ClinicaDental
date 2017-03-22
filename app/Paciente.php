@@ -15,4 +15,12 @@ class Paciente extends Model
     public function odontologo(){
         return $this->belongsToMany('App\Odontologo');
     }
+
+    public function tratamiento(){
+        return $this->hasMany('App\Tratamiento');
+    }
+
+    public function sesion(){
+        return $this->hasMany('App\Sesion');
+    }
 }
