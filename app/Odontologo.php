@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Odontologo extends Model
 {
     //
-    protected $fillable = ['especialidad','sueldo'];
+    protected $fillable = ['especialidad'];
 
     public function user(){
         return $this->belongsTo('App\User');
@@ -21,7 +21,4 @@ class Odontologo extends Model
         return $this->hasMany('App\Tratamiento');
     }
 
-    public function sesion(){
-        return $this->hasMany('App\Sesion');
-    }
 }

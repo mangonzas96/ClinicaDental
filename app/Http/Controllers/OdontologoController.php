@@ -2,28 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Odontologo;
 use Illuminate\Http\Request;
-use App\Paciente;
 
-class PacienteController extends Controller
+class OdontologoController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         //
-        $pacientes = Paciente::all();
+        $odontologos = Odontologo::all();
 
-        return view('pacientes/index', ['pacientes'=>$pacientes]);
+        return view('odontologos/index', ['odontologos'=>$odontologos]);
     }
 
     /**
@@ -34,7 +33,7 @@ class PacienteController extends Controller
     public function create()
     {
         //
-        return view('pacientes/create');
+        return view('odontologos/create');
     }
 
     /**
@@ -53,20 +52,19 @@ class PacienteController extends Controller
             'telefono' => 'required|max:255',
             'email' => 'required|max:255',
             'direccion' => 'required|max:255',
-            'seguro' => 'required|max:255',
-            'infoGeneral' => 'required|max:255',
-            'sesion_id' => 'required|exists:sesions,id',
+            'especialidad' => 'required|max:255',
+            'gabinete_id' => 'required|exists:gabinetes,id',
             'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);
         $user = new User($request->all());
         $user->save();
 
-        $paciente = new Paciente($request->all());
-        $paciente->save();
+        $odontologo = new Odontologo($request->all());
+        $odontologo->save();
 
-        flash('Paciente creado correctamente');
+        flash('Odontologo creado correctamente');
 
-        return redirect()->route('pacientes.index');
+        return redirect()->route('odontologos.index');
     }
 
     /**
@@ -89,9 +87,9 @@ class PacienteController extends Controller
     public function edit($id)
     {
         //
-        $paciente = Paciente::find($id);
+        $odontologo = Odontologo::find($id);
 
-        return view('pacientes/edit',['paciente'=>$paciente]);
+        return view('odontologos/edit',['odontologo'=>$odontologo]);
     }
 
     /**
@@ -111,18 +109,19 @@ class PacienteController extends Controller
             'telefono' => 'required|max:255',
             'email' => 'required|max:255',
             'direccion' => 'required|max:255',
-            'seguro' => 'required|max:255',
-            'infoGeneral' => 'required|max:255',
+            'especialidad' => 'required|max:255',
+            'gabinete_id' => 'required|exists:gabinetes,id',
+            'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);
         $user = new User($request->all());
         $user->save();
 
-        $paciente = new Paciente($request->all());
-        $paciente->save();
+        $odontologo = new Odontologo($request->all());
+        $odontologo->save();
 
-        flash('Paciente modificado correctamente');
+        flash('Odontologo actualizado correctamente');
 
-        return redirect()->route('pacientes.index');
+        return redirect()->route('odontologos.index');
     }
 
     /**
@@ -134,10 +133,10 @@ class PacienteController extends Controller
     public function destroy($id)
     {
         //
-        $paciente = Paciente::find($id);
-        $paciente->delete();
-        flash('Paciente borrado correctamente');
+        $odontologo = Odontologo::find($id);
+        $odontologo->delete();
+        flash('Odontologo borrado correctamente');
 
-        return redirect()->route('pacientes.index');
+        return redirect()->route('odontologos.index');
     }
 }

@@ -70,8 +70,8 @@
 
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
-                        <a href="{{ url('/login') }}">ID_Personal</a>
-                        <a href="{{ url('/register') }}">Contraseña</a>
+                        <a href="{{ url('/login') }}">Identificate</a>
+                        <a href="{{ url('/register') }}">Registrate</a>
 
                 </div>
 

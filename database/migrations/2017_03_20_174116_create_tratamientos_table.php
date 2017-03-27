@@ -16,14 +16,12 @@ class CreateTratamientosTable extends Migration
         Schema::create('tratamientos', function (Blueprint $table) {
             $table->increments('id');
             $table->date('inicio');
-            $table->dateTime('proxcita');
+            $table->date('fin');
             $table->string('observaciones');
             $table->unsignedInteger('paciente_id');
             $table->foreign('paciente_id')->references('id')->on('pacientes')->onDelete('cascade');
             $table->unsignedInteger('odontologo_id');
             $table->foreign('odontologo_id')->references('id')->on('odontologos')->onDelete('cascade');
-            $table->unsignedInteger('sesion_id');
-            $table->foreign('sesion_id')->references('id')->on('sesions')->onDelete('cascade');
             $table->timestamps();
         });
     }
