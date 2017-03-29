@@ -46,7 +46,7 @@ class OdontologoController extends Controller
     {
         //
         $this->validate($request, [
-            'nombre' => 'required|max:255',
+            'name' => 'required|max:255',
             'apellido' => 'required|max:255',
             'dni' => 'required|max:255',
             'telefono' => 'required|max:255',
@@ -103,7 +103,7 @@ class OdontologoController extends Controller
     {
         //
         $this->validate($request, [
-            'nombre' => 'required|max:255',
+            'name' => 'required|max:255',
             'apellido' => 'required|max:255',
             'dni' => 'required|max:255',
             'telefono' => 'required|max:255',
