@@ -75,7 +75,7 @@ class OdontologoController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('odontologo.profile', ['odontologo' => User::findOrFail($id)]);
     }
 
     /**

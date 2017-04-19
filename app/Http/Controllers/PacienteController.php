@@ -77,7 +77,7 @@ class PacienteController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('paciente.profile', ['paciente' => User::findOrFail($id)]);
     }
 
     /**
