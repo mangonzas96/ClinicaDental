@@ -14,6 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::delete('Tratamiento/destroyAll', 'TratamientoController@destroyAll')->name('Tratamiento.destroyAll');
+Route::resource('Tratamiento', 'TratamientoController');
+
+Route::resource('odontologos', 'OdontologoController');
+Route::resource('pacientes', 'PacienteController');
+
+
+Route::resource('sesiones', 'SesionController');
 
 Auth::routes();
 

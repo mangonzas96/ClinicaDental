@@ -80,53 +80,6 @@
                     Arroyo 74
                 </div>
 
-                <?php
-                    $objetivos = ["1" => "Modernización de la aplicación web actual" , "2" => "Mejora de la usabilidad de la aplicación" , "3" => "Mejora de la intuitividad de la aplicación" , "4" => "Ampliación de contenidos" , "5" => "Creación de un apartado para la programación de citas"]
-                ?>
-                <table style="position:absolute;bottom:50px;left:45px">
-                    <tr>
-                        <th> Número de objetivo</th>
-                        <th> Objetivo </th>
-                    </tr>
-                    <?php
-                        foreach($objetivos as $numero => $objetivo){
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $numero ?>
-                        </td>
-                        <td>
-                            <?php echo $objetivo ?>
-                        </td>
-                    </tr>
-                    <?php
-                        }
-                    ?>
-                </table>
-
-                <?php
-                $alumnos = ["González Gómez, Manuel" => "mangonzas96@gmail.com" , "González Sánchez, Celia" => "celiags250396@gmail.com"]
-                ?>
-                <table style="position:absolute;bottom:100px;right:45px">
-                    <tr>
-                        <th> Apellidos, nombre </th>
-                        <th> Correo</th>
-                    </tr>
-                    <?php
-                    foreach($alumnos as $apn => $correo){
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $apn ?>
-                        </td>
-                        <td>
-                            <?php echo $correo ?>
-                        </td>
-                    </tr>
-                    <?php
-                    }
-                    ?>
-                </table>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Pacientes</a>
