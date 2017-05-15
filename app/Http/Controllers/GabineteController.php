@@ -114,7 +114,7 @@ class GabineteController extends Controller
 
         return redirect()->route('gabinetes.index');
     }
-
+/////
 
     /**
      * Remove the specified resource from storage.
