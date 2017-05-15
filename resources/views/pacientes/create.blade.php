@@ -24,7 +24,7 @@
                             {!! Form::text('dni',null,['class'=>'form-control', 'required']) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('telefono', 'Telefono del paciente') !!}
+                            {!! Form::label('telefono', 'Teléfono del paciente') !!}
                             {!! Form::text('telefono',null,['class'=>'form-control', 'required', 'autofocus']) !!}
                         </div>
                         <div class="form-group">
@@ -32,7 +32,7 @@
                             {!! Form::text('email',null,['class'=>'form-control', 'required', 'autofocus']) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('direccion', 'Direccion del paciente') !!}
+                            {!! Form::label('direccion', 'Dirección del paciente') !!}
                             {!! Form::text('direccion',null,['class'=>'form-control', 'required', 'autofocus']) !!}
                         </div>
                         <div class="form-group">
@@ -40,7 +40,7 @@
                             {!! Form::text('seguro',null,['class'=>'form-control', 'required', 'autofocus']) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::label('infoGeneral', 'Informacion general del paciente') !!}
+                            {!! Form::label('infoGeneral', 'Información general del paciente') !!}
                             {!! Form::text('infoGeneral',null,['class'=>'form-control', 'required', 'autofocus']) !!}
                         </div>
                         {!! Form::submit('Guardar',['class'=>'btn-primary btn']) !!}

@@ -26,7 +26,7 @@
                                 <th>InfoGeneral</th>
 
 
-                                <th colspan="2">Acciones</th>
+
                             </tr>
 
                             @foreach ($pacientes as $paciente)
