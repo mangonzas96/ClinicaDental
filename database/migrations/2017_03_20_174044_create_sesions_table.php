@@ -16,7 +16,6 @@ class CreateSesionsTable extends Migration
         Schema::create('sesions', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('fecha');
-            $table->string('observaciones');
             $table->unsignedInteger('gabinete_id');
             $table->foreign('gabinete_id')->references('id')->on('gabinetes')->onDelete('cascade');
             $table->unsignedInteger('paciente_id');

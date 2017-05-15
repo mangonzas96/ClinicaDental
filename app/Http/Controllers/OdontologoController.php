@@ -53,6 +53,7 @@ class OdontologoController extends Controller
             'email' => 'required|max:255',
             'direccion' => 'required|max:255',
             'especialidad' => 'required|max:255',
+            'sueldo' => 'required|max:255',
             'gabinete_id' => 'required|exists:gabinetes,id',
             'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);
@@ -110,6 +111,7 @@ class OdontologoController extends Controller
             'email' => 'required|max:255',
             'direccion' => 'required|max:255',
             'especialidad' => 'required|max:255',
+            'sueldo' => 'required|max:255',
             'gabinete_id' => 'required|exists:gabinetes,id',
             'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tratamiento extends Model
 {
     //
-    protected $fillable = ['proxcita','observaciones'];
+    protected $fillable = ['name','fin','inicio','observaciones'];
 
     public function paciente(){
         return $this->belongsTo('App\Paciente');

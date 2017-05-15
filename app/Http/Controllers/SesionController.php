@@ -27,7 +27,7 @@ class SesionController extends Controller
     {
         $sesiones = Sesion::all();
 
-        return view('sesiones/index',['citas'=>$sesiones]);
+        return view('sesiones/index',['sesiones'=>$sesiones]);
     }
 
     /**
@@ -59,7 +59,7 @@ class SesionController extends Controller
             'odontologo_id' => 'required|exists:medicos,id',
             'gabinete_id' => 'required|exists:gabinetes,id',
             'paciente_id' => 'required|exists:pacientes,id',
-            'fecha_hora' => 'required|date|after:now',
+            'fecha' => 'required|date|after:now',
 
         ]);
 
@@ -117,7 +117,7 @@ class SesionController extends Controller
             'odontologo_id' => 'required|exists:medicos,id',
             'paciente_id' => 'required|exists:pacientes,id',
             'gabinete_id' => 'required|exists:gabinetes,id',
-            'fecha_hora' => 'required|date|after:now',
+            'fecha' => 'required|date|after:now',
 
         ]);
         $sesion = Sesion::find($id);

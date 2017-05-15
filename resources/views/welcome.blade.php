@@ -12,14 +12,17 @@
 
         <!-- Styles -->
         <style>
+
             html, body {
-                background-color: #BAF0F0;
+                background-image: url("http://www.dentalescudero.com/images/dentistasdeSurco.jpg");
                 color: #04212F;
                 font-family: 'courier', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
+
+
 
             .full-height {
                 height: 100vh;
@@ -70,8 +73,11 @@
 
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
-                        <a href="{{ url('/login') }}">Identificate</a>
-                        <a href="{{ url('/register') }}">Registrate</a>
+
+                    <a href="{{ url('/login') }}"><FONT FACE="raro, courier" SIZE=5 COLOR="white">
+                            IDENTIFICATE</FONT></a>
+                        <a href="{{ url('/register') }}"> <FONT FACE="raro, courier" SIZE=5 COLOR="white">
+                                REGISTRATE</FONT></a>
 
                 </div>
 
@@ -81,13 +87,7 @@
                 </div>
 
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Pacientes</a>
-                    <a href="https://laravel-news.com">Personal sanitario</a>
-                    <a href="https://forge.laravel.com">Personal extra</a>
-                    <a href="http://php.net/manual/es/langref.php">Gabinetes</a>
-                    <a href="https://www.mysql.com/products/workbench/">Citas del día</a>
-                </div>
+
             </div>
         </div>
     </body>

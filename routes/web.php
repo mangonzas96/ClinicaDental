@@ -23,6 +23,8 @@ Route::resource('pacientes', 'PacienteController');
 
 Route::resource('sesiones', 'SesionController');
 
+Route::resource('gabinetes', 'GabineteController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

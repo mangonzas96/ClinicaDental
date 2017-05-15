@@ -55,7 +55,7 @@ class PacienteController extends Controller
             'direccion' => 'required|max:255',
             'seguro' => 'required|max:255',
             'infoGeneral' => 'required|max:255',
-            'sesion_id' => 'required|exists:sesions,id',
+            'sesion_id' => 'required|exists:sesiones,id',
             'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);
         $user = new User($request->all());
