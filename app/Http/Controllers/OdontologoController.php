@@ -112,7 +112,7 @@ class OdontologoController extends Controller
             'direccion' => 'required|max:255',
             'especialidad' => 'required|max:255',
             'sueldo' => 'required|max:255',
-            'gabinete_id' => 'required|exists:gabinetes,id',
+
             'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);
         $user = new User($request->all());
