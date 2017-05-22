@@ -18,7 +18,12 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Apellidos</th>
+                                <th>DNI</th>
+                                <th>Teléfono</th>
+                                <th>Email</th>
+                                <th>Dirección</th>
                                 <th>Especialidad</th>
+                                <th>Sueldo</th>
                                 <th colspan="2">Acciones</th>
                             </tr>
 
@@ -28,7 +33,12 @@
                                 <tr>
                                     <td>{{ $odontologo->name }}</td>
                                     <td>{{ $odontologo->apellido }}</td>
+                                    <td>{{ $odontologo->dni}}</td>
+                                    <td>{{ $odontologo->telefono}}</td>
+                                    <td>{{ $odontologo->email}}</td>
+                                    <td>{{ $odontologo->direccion}}</td>
                                     <td>{{ $odontologo->especialidad->name }}</td>
+                                    <td>{{ $odontologo->sueldo}}</td>
 
                                     <td>
                                         {!! Form::open(['route' => ['odontologos.edit',$odontologo->id], 'method' => 'get']) !!}

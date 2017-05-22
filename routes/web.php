@@ -20,6 +20,13 @@ Route::resource('Tratamiento', 'TratamientoController');
 Route::resource('odontologos', 'OdontologoController');
 Route::resource('pacientes', 'PacienteController');
 
+Route::get('/registerodontologo', function (){
+    return view('auth/registerodontologo');
+});
+
+Route::get('/registerpaciente', function (){
+    return view('auth/registerpaciente');
+});
 
 Route::resource('sesiones', 'SesionController');
 

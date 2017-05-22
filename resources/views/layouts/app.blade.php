@@ -8,10 +8,65 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Arroyo 74') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+
+        html, body {
+            background-image: url("http://www.dentalescudero.com/images/dentistasdeSurco.jpg");
+            color: #191970;
+            font-family: 'raro, courier', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links > a {
+            color: #191970;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+    </style>
 
     <!-- Scripts -->
     <script>
@@ -36,7 +91,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Arroyo 74') }}
                     </a>
                 </div>
 
@@ -50,8 +105,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}">Identifícate</a></li>
+                            <li><a href="{{ route('register') }}">Regístrate</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -63,7 +118,7 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Cerrar sesión
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

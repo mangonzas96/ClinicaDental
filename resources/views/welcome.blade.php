@@ -16,7 +16,7 @@
             html, body {
                 background-image: url("http://www.dentalescudero.com/images/dentistasdeSurco.jpg");
                 color: #04212F;
-                font-family: 'courier', sans-serif;
+                font-family: 'raro, courier', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -74,11 +74,12 @@
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
 
-                    <a href="{{ url('/login') }}"><FONT FACE="raro, courier" SIZE=5 COLOR="white">
+                    <a href="{{ url('/login') }}"><FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
                             IDENTIFICATE</FONT></a>
-                        <a href="{{ url('/register') }}"> <FONT FACE="raro, courier" SIZE=5 COLOR="white">
-                                REGISTRATE</FONT></a>
-
+                    <a href="{{ url('/registerodontologo') }}"> <FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
+                            REGISTRATE COMO ODONTÓLOGO</FONT></a>
+                    <a href="{{ url('/registerpaciente') }}"> <FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
+                            REGISTRATE COMO PACIENTE</FONT></a>
                 </div>
 
             <div class="content">

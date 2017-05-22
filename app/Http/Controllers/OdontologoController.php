@@ -54,9 +54,10 @@ class OdontologoController extends Controller
             'direccion' => 'required|max:255',
             'especialidad' => 'required|max:255',
             'sueldo' => 'required|max:255',
+
         ]);
-        //$user = new User($request->all());
-        //$user->save();
+        $user = new User($request->all());
+        $user->save();
 
         $odontologo = new Odontologo($request->all());
         $odontologo->save();
@@ -64,8 +65,6 @@ class OdontologoController extends Controller
         flash('Odontologo creado correctamente');
 
         return redirect()->route('odontologos.index');
-
-
     }
 
     /**
@@ -112,7 +111,11 @@ class OdontologoController extends Controller
             'direccion' => 'required|max:255',
             'especialidad' => 'required|max:255',
             'sueldo' => 'required|max:255',
+
+            'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);
+        $user = new User($request->all());
+        $user->save();
 
         $odontologo = new Odontologo($request->all());
         $odontologo->save();
