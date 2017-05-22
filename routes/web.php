@@ -22,11 +22,11 @@ Route::resource('pacientes', 'PacienteController');
 
 Route::get('/registerodontologo', function (){
     return view('auth/registerodontologo');
-});
+})->name('auth/registerodontologo');
 
 Route::get('/registerpaciente', function (){
     return view('auth/registerpaciente');
-});
+})->name('auth/registerpaciente');
 
 Route::resource('sesiones', 'SesionController');
 

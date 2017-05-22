@@ -17,7 +17,7 @@
         html, body {
             background-image: url("http://www.dentalescudero.com/images/dentistasdeSurco.jpg");
             color: #191970;
-            font-family: 'raro, courier', sans-serif;
+            font-family: 'raro, courie', sans-serif;
             font-weight: 100;
             height: 100vh;
             margin: 0;
@@ -101,12 +101,14 @@
                         &nbsp;
                     </ul>
 
+
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Identifícate</a></li>
-                            <li><a href="{{ route('register') }}">Regístrate</a></li>
+                            <li><a href="{{ route('login') }}"><FONT FACE="raro, courier", sans-serif SIZE=4 COLOR="#191970">Identifícate</FONT></a></li>
+                            <li><a href="{{ route('auth/registerodontologo') }}"><FONT FACE="raro, courier", sans-serif SIZE=4 COLOR="#191970">Regístrate como odontólogo</FONT></a></li>
+                            <li><a href="{{ route('auth/registerpaciente') }}"><FONT FACE="raro, courier", sans-serif SIZE=4 COLOR="#191970">Regístrate como paciente</FONT></a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
