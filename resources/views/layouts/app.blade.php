@@ -15,7 +15,6 @@
     <style>
 
         html, body {
-            background-image: url("http://www.dentalescudero.com/images/dentistasdeSurco.jpg");
             color: #191970;
             font-family: 'raro, courie', sans-serif;
             font-weight: 100;

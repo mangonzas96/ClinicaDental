@@ -14,7 +14,7 @@
         <style>
 
             html, body {
-                background-image: url("http://www.dentalescudero.com/images/dentistasdeSurco.jpg");
+                background-image: url("http://www.impiantidentalialbania.it/wp-content/themes/healing-touch/images/slides/slider1.jpg");
                 color: #04212F;
                 font-family: 'raro, courier', sans-serif;
                 font-weight: 100;

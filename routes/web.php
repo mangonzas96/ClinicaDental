@@ -30,7 +30,7 @@ Route::get('/registerpaciente', function (){
 
 Route::get('/homeodontologo', 'HomeController@index');
 
-Route::resource('sesiones', 'SesionController');
+Route::resource('sesions', 'SesionController');
 
 Route::resource('gabinetes', 'GabineteController');
 

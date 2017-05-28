@@ -67,6 +67,9 @@
     </style>
 </head>
 <body>
+<body>
+<img src="http://www.sanchezromero.dental/wp-content/uploads/2015/06/logo-5-copia.png"
+/>
 <div class="flex-center position-ref full-height">
 
     <div class="content">
@@ -80,7 +83,7 @@
             <a href="{{ url('/pacientes/create') }}"> <FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
                     Crea un paciente</FONT></a>
             <a href="{{ url('/sesions/create') }}"> <FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
-                    Crea un odontólogo</FONT></a>
+                    Crea una sesión</FONT></a>
         </div>
     </div>
 </div>
