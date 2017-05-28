@@ -28,6 +28,8 @@ Route::get('/registerpaciente', function (){
     return view('auth/registerpaciente');
 })->name('auth/registerpaciente');
 
+Route::get('/homeodontologo', 'HomeController@index');
+
 Route::resource('sesiones', 'SesionController');
 
 Route::resource('gabinetes', 'GabineteController');
