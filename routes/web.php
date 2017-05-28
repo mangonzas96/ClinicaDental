@@ -29,6 +29,7 @@ Route::get('/registerpaciente', function (){
 })->name('auth/registerpaciente');
 
 Route::get('/homeodontologo', 'HomeController@index');
+Route::get('/homepaciente', 'HomeController@index');
 
 Route::resource('sesions', 'SesionController');
 
