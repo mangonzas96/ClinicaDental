@@ -12,6 +12,7 @@ class OdontologoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -45,6 +46,21 @@ class OdontologoController extends Controller
     public function store(Request $request)
     {
         //
+        /**$odontologo = new Odontologo;
+        $odontologo->name = $request->input('name');
+        $odontologo->apellido  = $request->input('apellido');
+        $odontologo->dni = $request->input('dni');
+        $odontologo->telefono = $request->input('telefono');
+        $odontologo->email = $request->input('emai');
+        $odontologo->direccion = $request->input('direccion');
+        $odontologo->especialidad = $request->input('especialidad');
+        $odontologo->sueldo = $request->input('sueldo');
+
+        $odontologo->save();
+
+        flash('Odontologo creado correctamente');
+        return redirect()->route('odontologos.index');**/
+
         $this->validate($request, [
             'name' => 'required|max:255',
             'apellido' => 'required|max:255',
@@ -65,6 +81,7 @@ class OdontologoController extends Controller
         flash('Odontologo creado correctamente');
 
         return redirect()->route('odontologos.index');
+
     }
 
     /**

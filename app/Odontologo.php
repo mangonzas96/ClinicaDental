@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Odontologo extends Model
 {
     //
+    protected $fillable = ['name','apellido','dni','telefono','email','direccion','especialidad','sueldo','created_at', 'updated_at'];
+
+    protected $table = 'odontologos';
 
     public function user(){
         return $this->belongsTo('App\User');

@@ -15,7 +15,7 @@ class CreateOdontologosTable extends Migration
     {
         Schema::create('odontologos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('especialidad');
+            $table->enum('especialidad', ['ortodoncia','endodoncia','prótesis','cirujía','periodoncía']);
             $table->double('sueldo');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
