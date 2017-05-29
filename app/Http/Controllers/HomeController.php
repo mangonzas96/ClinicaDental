@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Odontologo;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('homeodontologo');
+
+
+        if(AuthenticatesUsers:: Odontologo) {
+            return view('homeodontologo');
+        }else{
+            return view('homepaciente');
+        }
     }
 }

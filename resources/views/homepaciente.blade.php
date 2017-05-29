@@ -78,10 +78,7 @@
         </div>
 
         <div class="links">
-            <a href="{{ url('/odontologos/create') }}"> <FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
-                    Crea un odontólogo</FONT></a>
-            <a href="{{ url('/pacientes/create') }}"> <FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
-                    Crea un paciente</FONT></a>
+
             <a href="{{ url('/sesions/create') }}"> <FONT FACE="raro, courier" SIZE=4 COLOR="#191970">
                     Crea una sesión</FONT></a>
         </div>
