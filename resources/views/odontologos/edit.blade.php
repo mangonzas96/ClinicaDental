@@ -20,11 +20,7 @@
                             {!! Form::label('apellido', 'Apellidos del medico') !!}
                             {!! Form::text('apellido',$odontologo->apellido,['class'=>'form-control', 'required']) !!}
                         </div>
-                        <div class="form-group">
-                            {!!Form::label('tratamiento_id', 'Tratamiento medico') !!}
-                            <br>
-                            {!! Form::select('tratamiento_id', $tratamientos, $odontologo->tratamiento_id, ['class' => 'form-control', 'required']) !!}
-                        </div>
+
                         {!! Form::submit('Guardar',['class'=>'btn-primary btn']) !!}
 
                         {!! Form::close() !!}

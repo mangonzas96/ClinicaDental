@@ -37,7 +37,7 @@
                                     <td>{{ $odontologo->telefono}}</td>
                                     <td>{{ $odontologo->email}}</td>
                                     <td>{{ $odontologo->direccion}}</td>
-                                    <td>{{ $odontologo->especialidad->name }}</td>
+                                    <td>{{ $odontologo->especialidad}}</td>
                                     <td>{{ $odontologo->sueldo}}</td>
 
                                     <td>

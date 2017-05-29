@@ -44,6 +44,7 @@
                             {!! Form::text('sueldo',null,['class'=>'form-control', 'required']) !!}
                         </div>
 
+
                         {!! Form::submit('Guardar',['class'=>'btn-primary btn']) !!}
 
                         {!! Form::close() !!}

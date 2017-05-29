@@ -15,6 +15,7 @@
     <style>
 
         html, body {
+            background-image: url("http://www.impiantidentalialbania.it/wp-content/themes/healing-touch/images/slides/slider1.jpg");
             color: #191970;
             font-family: 'raro, courie', sans-serif;
             font-weight: 100;

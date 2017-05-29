@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Odontologo;
+use App\User;
 use Illuminate\Http\Request;
 
 class OdontologoController extends Controller
@@ -34,7 +35,8 @@ class OdontologoController extends Controller
     public function create()
     {
         //
-        return view('odontologos/create');
+        $user = User::find('user_id');
+        return view('odontologos/create',['users'=>$user]);
     }
 
     /**
@@ -45,21 +47,6 @@ class OdontologoController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        /**$odontologo = new Odontologo;
-        $odontologo->name = $request->input('name');
-        $odontologo->apellido  = $request->input('apellido');
-        $odontologo->dni = $request->input('dni');
-        $odontologo->telefono = $request->input('telefono');
-        $odontologo->email = $request->input('emai');
-        $odontologo->direccion = $request->input('direccion');
-        $odontologo->especialidad = $request->input('especialidad');
-        $odontologo->sueldo = $request->input('sueldo');
-
-        $odontologo->save();
-
-        flash('Odontologo creado correctamente');
-        return redirect()->route('odontologos.index');**/
 
         $this->validate($request, [
             'name' => 'required|max:255',
@@ -70,10 +57,7 @@ class OdontologoController extends Controller
             'direccion' => 'required|max:255',
             'especialidad' => 'required|max:255',
             'sueldo' => 'required|max:255',
-
         ]);
-        $user = new User($request->all());
-        $user->save();
 
         $odontologo = new Odontologo($request->all());
         $odontologo->save();
@@ -128,13 +112,11 @@ class OdontologoController extends Controller
             'direccion' => 'required|max:255',
             'especialidad' => 'required|max:255',
             'sueldo' => 'required|max:255',
-
-            'tratamiento_id' => 'required|exists:tratamientos,id',
         ]);
-        $user = new User($request->all());
-        $user->save();
 
-        $odontologo = new Odontologo($request->all());
+        $odontologo = Odontologo::find($id);
+        $odontologo->fill($request->all());
+
         $odontologo->save();
 
         flash('Odontologo actualizado correctamente');

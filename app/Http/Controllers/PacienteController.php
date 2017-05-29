@@ -34,7 +34,8 @@ class PacienteController extends Controller
     public function create()
     {
         //
-        return view('pacientes/create');
+        $user = User::find('user_id');
+        return view('pacientes/create',['users'=>$user]);
     }
 
     /**
@@ -111,7 +112,8 @@ class PacienteController extends Controller
             'infoGeneral' => 'required|max:255',
         ]);
 
-        $paciente = new Paciente($request->all());
+        $paciente = Paciente::find($id);
+        $paciente ->fill($request->all());
         $paciente->save();
 
         flash('Paciente modificado correctamente');
